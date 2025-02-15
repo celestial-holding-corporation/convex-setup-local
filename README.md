@@ -34,6 +34,7 @@ Create a `.env` file in the same directory:
 ```env
 DATABASE_URL=postgresql://your_db_user:your_db_password@your_db_host
 INSTANCE_NAME=convex
+INSTANCE_SECRET=<somerandomvalue>
 CONVEX_CLOUD_ORIGIN=http://your-domain-or-ip:3210
 CONVEX_SITE_ORIGIN=http://your-domain-or-ip:3211
 DISABLE_BEACON=true
@@ -45,7 +46,6 @@ RUST_BACKTRACE=1
 **Important:** The `INSTANCE_NAME` field can be any value but must not contain spaces.
 
 ### Generate an `INSTANCE_SECRET`
-Since we do not store `INSTANCE_SECRET` in the `.env` file for security reasons, generate it manually:
 ```sh
 openssl rand -hex 32
 ```
