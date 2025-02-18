@@ -1,6 +1,6 @@
 services:
   backend:
-    image: convex-backend
+    image: leishengio/convex-backend:latest
     ports:
       - "${PORT:-3210}:3210"
       - "${SITE_PROXY_PORT:-3211}:3211"
